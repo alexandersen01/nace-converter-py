@@ -49,15 +49,19 @@ print(info)
 ### Module-level Functions
 
 #### `get_description(code: str) -> Optional[str]`
+
 Get the plaintext description for a NACE code.
 
 #### `search_code(keyword: str, max_results: Optional[int] = None) -> List[Dict]`
+
 Search for NACE codes containing a keyword. Returns a list of matching codes with their descriptions.
 
 #### `search_codes(keyword: str, max_results: Optional[int] = None) -> List[Dict]`
+
 Alias for `search_code()` that returns multiple results.
 
 #### `get_full_info(code: str) -> Optional[Dict]`
+
 Get complete information for a NACE code including level, parent code, notes, and validity dates.
 
 ### NACEConverter Class
@@ -65,7 +69,7 @@ Get complete information for a NACE code including level, parent code, notes, an
 For more advanced usage, you can work directly with the `NACEConverter` class:
 
 ```python
-from naceconverter import NACEConverter
+from naceconverter.NACEConverter import NACEConverter
 
 converter = NACEConverter()
 description = converter.get_description("01.1")
@@ -74,6 +78,7 @@ description = converter.get_description("01.1")
 ## Examples
 
 ### Finding all codes related to agriculture
+
 ```python
 import naceconverter as nc
 
@@ -83,6 +88,7 @@ for r in results:
 ```
 
 ### Getting parent-child relationships
+
 ```python
 import naceconverter as nc
 
